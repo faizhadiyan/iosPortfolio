@@ -125,10 +125,10 @@ export default function ProjectPage({ params }) {
 
   if (!project) {
     return (
-      <div className="min-h-screen bg-[#FBFBFD] flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-[#1D1D1F] mb-4">Project Not Found</h1>
-          <p className="text-[#86868B] mb-8">The project you&apos;re looking for doesn&apos;t exist.</p>
+      <div className="min-h-screen bg-[#FBFBFD] flex items-center justify-center p-4">
+        <div className="text-center w-full max-w-md">
+          <h1 className="text-2xl sm:text-3xl font-bold text-[#1D1D1F] mb-4">Project Not Found</h1>
+          <p className="text-[#86868B] mb-8 px-4">The project you&apos;re looking for doesn&apos;t exist.</p>
           <Link href="/projects" className="inline-block bg-[#0071E3] text-white px-6 py-3 rounded-full hover:bg-[#0077ED] transition-colors">
             View All Projects
           </Link>
@@ -138,8 +138,8 @@ export default function ProjectPage({ params }) {
   }
 
   return (
-    <main className="min-h-screen bg-[#FBFBFD] py-20">
-      <div className="max-w-7xl mx-auto px-4">
+    <main className="min-h-screen bg-[#FBFBFD] py-12 sm:py-16 md:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ProjectDetails {...project} />
       </div>
     </main>
