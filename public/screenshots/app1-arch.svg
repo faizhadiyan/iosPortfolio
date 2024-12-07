@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" version="1.1" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+ <rect width="800" height="450" fill="#f5f5f7"/>
+ <g transform="matrix(1.5 0 0 1.5 100 25)" fill="#86868b">
+  <rect x="50" y="50" width="150" height="50" rx="5"/>
+  <rect x="250" y="50" width="150" height="50" rx="5"/>
+  <rect x="150" y="150" width="150" height="50" rx="5"/>
+  <path d="m125 100v25h25l-25-25zm275 0v25h-25l25-25z"/>
+  <path d="m225 200v-25h25l-25 25z"/>
+ </g>
+</svg>
