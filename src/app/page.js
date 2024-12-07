@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -14,9 +15,9 @@ export default function Home() {
           </div>
           <h1 className="text-5xl font-bold text-[#1D1D1F] mb-6">iOS Developer &amp; Mobile App Specialist</h1>
           <p className="text-xl text-[#86868B] max-w-3xl mx-auto mb-8">Hi, I&apos;m Faiz Hadiyan. I craft elegant and user-friendly iOS applications that deliver exceptional experiences. Let&apos;s build something amazing together.</p>
-          <a href="/contact" className="inline-block bg-[#0071E3] text-white px-8 py-4 rounded-full font-medium hover:bg-[#0077ED] transition-colors duration-300">
+          <Link href="/contact" className="inline-block bg-[#0071E3] text-white px-8 py-4 rounded-full font-medium hover:bg-[#0077ED] transition-colors duration-300">
             Get in Touch
-          </a>
+          </Link>
         </section>
 
         {/* Skills Section */}
@@ -60,7 +61,7 @@ export default function Home() {
         <section>
           <h2 className="text-3xl font-bold text-[#1D1D1F] text-center mb-12">Featured Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <a href="/projects" className="group">
+            <Link href="/projects" className="group">
               <div className="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-[1.02]">
                 <div className="aspect-video bg-[#F5F5F7]"></div>
                 <div className="p-6">
@@ -68,8 +69,8 @@ export default function Home() {
                   <p className="text-[#86868B]">Brief description of the project and its key features.</p>
                 </div>
               </div>
-            </a>
-            <a href="/projects" className="group">
+            </Link>
+            <Link href="/projects" className="group">
               <div className="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-[1.02]">
                 <div className="aspect-video bg-[#F5F5F7]"></div>
                 <div className="p-6">
@@ -77,12 +78,12 @@ export default function Home() {
                   <p className="text-[#86868B]">Brief description of the project and its key features.</p>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
           <div className="text-center mt-12">
-            <a href="/projects" className="inline-block bg-[#0071E3] text-white px-8 py-4 rounded-full font-medium hover:bg-[#0077ED] transition-colors duration-300">
+            <Link href="/projects" className="inline-block bg-[#0071E3] text-white px-8 py-4 rounded-full font-medium hover:bg-[#0077ED] transition-colors duration-300">
               View All Projects
-            </a>
+            </Link>
           </div>
         </section>
       </div>

@@ -1,4 +1,5 @@
 import ProjectDetails from '../../../components/ProjectDetails';
+import Link from 'next/link';
 
 // This would typically come from a database or CMS
 const projectsData = {
@@ -128,9 +129,9 @@ export default function ProjectPage({ params }) {
         <div className="text-center">
           <h1 className="text-2xl font-bold text-[#1D1D1F] mb-4">Project Not Found</h1>
           <p className="text-[#86868B] mb-8">The project you&apos;re looking for doesn&apos;t exist.</p>
-          <a href="/projects" className="inline-block bg-[#0071E3] text-white px-6 py-3 rounded-full hover:bg-[#0077ED] transition-colors">
+          <Link href="/projects" className="inline-block bg-[#0071E3] text-white px-6 py-3 rounded-full hover:bg-[#0077ED] transition-colors">
             View All Projects
-          </a>
+          </Link>
         </div>
       </div>
     );
