@@ -6,7 +6,7 @@ export default function Contact() {
       <div className="max-w-3xl mx-auto px-4 py-20">
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold text-[#1D1D1F] mb-4">Get in Touch</h1>
-          <p className="text-[#86868B] max-w-2xl mx-auto">Looking to build an innovative iOS application? Let's discuss how we can work together to bring your ideas to life.</p>
+          <p className="text-[#86868B] max-w-2xl mx-auto">Looking to build an innovative iOS application? Let&apos;s discuss how we can work together to bring your ideas to life.</p>
         </header>
 
         <div className="bg-white rounded-2xl p-8 shadow-lg">

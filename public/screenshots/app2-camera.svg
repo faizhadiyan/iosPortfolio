@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" version="1.1" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+ <rect width="800" height="450" fill="#f5f5f7"/>
+ <g transform="matrix(1.5 0 0 1.5 100 25)" fill="#86868b">
+  <rect x="100" y="50" width="300" height="200" rx="10"/>
+  <circle cx="250" cy="250" r="15"/>
+  <rect x="125" y="275" width="250" height="10" rx="5"/>
+ </g>
+</svg>
