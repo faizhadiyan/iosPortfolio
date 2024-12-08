@@ -9,17 +9,39 @@ export default function ContactForm() {
     message: '',
   });
 
-  const handleSubmit = (e) => {
+  const [status, setStatus] = useState({
+    type: '',
+    message: '',
+  });
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    setStatus({ type: 'loading', message: 'Sending...' });
+
+    try {
+      // Here you would typically send the form data to your backend
+      // For now, we'll just simulate a successful submission
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      setStatus({
+        type: 'success',
+        message: "Thank you for your message! I'll get back to you soon.",
+      });
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: 'Something went wrong. Please try again.',
+      });
+    }
   };
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   return (
@@ -34,9 +56,8 @@ export default function ContactForm() {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg bg-[#F5F5F7] border-0 focus:ring-2 focus:ring-[#0071E3] transition-shadow"
-          placeholder="Your name"
           required
+          className="w-full px-4 py-2 rounded-lg border border-[#E5E5E5] focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:border-transparent"
         />
       </div>
 
@@ -50,9 +71,8 @@ export default function ContactForm() {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg bg-[#F5F5F7] border-0 focus:ring-2 focus:ring-[#0071E3] transition-shadow"
-          placeholder="your.email@example.com"
           required
+          className="w-full px-4 py-2 rounded-lg border border-[#E5E5E5] focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:border-transparent"
         />
       </div>
 
@@ -65,18 +85,17 @@ export default function ContactForm() {
           name="message"
           value={formData.message}
           onChange={handleChange}
-          rows="6"
-          className="w-full px-4 py-3 rounded-lg bg-[#F5F5F7] border-0 focus:ring-2 focus:ring-[#0071E3] transition-shadow"
-          placeholder="Tell me about your project..."
           required
-        ></textarea>
+          rows="4"
+          className="w-full px-4 py-2 rounded-lg border border-[#E5E5E5] focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:border-transparent resize-none"
+        />
       </div>
 
-      <div className="flex justify-end">
-        <button type="submit" className="bg-[#0071E3] text-white px-8 py-3 rounded-full font-medium hover:bg-[#0077ED] transition-colors duration-300">
-          Send Message
-        </button>
-      </div>
+      <button type="submit" disabled={status.type === 'loading'} className="w-full bg-[#0071E3] text-white py-3 px-6 rounded-lg hover:bg-[#0077ED] transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+        {status.type === 'loading' ? 'Sending...' : 'Send Message'}
+      </button>
+
+      {status.message && <div className={`mt-4 p-4 rounded-lg ${status.type === 'success' ? 'bg-green-50 text-green-800' : status.type === 'error' ? 'bg-red-50 text-red-800' : 'bg-blue-50 text-blue-800'}`}>{status.message}</div>}
     </form>
   );
 }

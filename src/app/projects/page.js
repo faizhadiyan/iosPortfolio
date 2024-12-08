@@ -3,6 +3,7 @@ import ProjectCard from '../../components/ProjectCard';
 export default function Projects() {
   const projects = [
     {
+      slug: 'swift-sync-pro',
       title: 'SwiftSync Pro',
       description: 'A sophisticated iOS application that demonstrates modern Swift development practices and intuitive user experience design.',
       image: '/screenshots/app1-sync.svg',
@@ -13,6 +14,7 @@ export default function Projects() {
       features: ['Real-time data synchronization', 'Offline-first architecture', 'Custom animations and transitions', 'iCloud integration'],
     },
     {
+      slug: 'vision-ai',
       title: 'VisionAI',
       description: 'An innovative iOS app showcasing advanced iOS frameworks and clean architecture principles.',
       image: '/screenshots/app2-ml.svg',
@@ -23,6 +25,7 @@ export default function Projects() {
       features: ['Machine learning integration', 'Custom UI components', 'Push notifications', 'Background processing'],
     },
     {
+      slug: 'healthkit-connect',
       title: 'HealthKit Connect',
       description: 'A comprehensive health tracking app integrating with Apple HealthKit for personalized wellness insights.',
       image: '/window.svg',
@@ -33,6 +36,7 @@ export default function Projects() {
       features: ['Health data tracking', 'Custom analytics', 'Goal setting', 'Progress visualization'],
     },
     {
+      slug: 'arkit-explorer',
       title: 'ARKit Explorer',
       description: 'An augmented reality experience showcasing the power of ARKit with interactive 3D content.',
       image: '/globe.svg',
@@ -43,6 +47,7 @@ export default function Projects() {
       features: ['3D object recognition', 'Spatial mapping', 'Interactive AR elements', 'Real-time physics'],
     },
     {
+      slug: 'swiftui-weather',
       title: 'SwiftUI Weather',
       description: 'A beautiful weather app built with SwiftUI featuring dynamic animations and real-time updates.',
       image: '/project1-placeholder.svg',
@@ -53,6 +58,7 @@ export default function Projects() {
       features: ['Live weather data', 'Custom animations', 'Location services', 'Weather alerts'],
     },
     {
+      slug: 'cryptotracker-pro',
       title: 'CryptoTracker Pro',
       description: 'Real-time cryptocurrency tracking app with custom charts and price alerts.',
       image: '/project2-placeholder.svg',
@@ -74,7 +80,7 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            <ProjectCard key={project.slug} {...project} />
           ))}
         </div>
       </div>

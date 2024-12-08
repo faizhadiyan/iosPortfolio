@@ -4,7 +4,7 @@ import Link from 'next/link';
 // This would typically come from a database or CMS
 const projectsData = [
   {
-    slug: 'swiftsync-pro',
+    slug: 'swift-sync-pro',
     title: 'SwiftSync Pro',
     description: 'A sophisticated iOS application that demonstrates modern Swift development practices and intuitive user experience design.',
     image: '/project1-placeholder.svg',
@@ -113,6 +113,210 @@ const projectsData = [
       • 99.9% uptime since launch
     `,
   },
+  {
+    slug: 'healthkit-connect',
+    title: 'HealthKit Connect',
+    description: 'A comprehensive health tracking app integrating with Apple HealthKit for personalized wellness insights.',
+    image: '/window.svg',
+    appStoreLink: '#',
+    githubLink: '#',
+    technologies: ['Swift', 'HealthKit', 'Charts', 'CoreMotion', 'CloudKit'],
+    features: ['Health data tracking', 'Custom analytics', 'Goal setting', 'Progress visualization', 'Workout tracking', 'Nutrition logging'],
+    challenges: ['Ensuring accurate health data synchronization across devices.', 'Implementing privacy-first data handling.', 'Creating intuitive data visualizations for complex health metrics.'],
+    solutions: ['Developed a robust HealthKit integration layer with data validation.', 'Implemented end-to-end encryption for sensitive health data.', 'Created custom chart components for health trend analysis.'],
+    architecture: `
+      The app follows a modular health-tracking architecture:
+
+      1. Health Data Layer
+      - HealthKit integration
+      - Data validation & processing
+      - Secure storage
+
+      2. Analytics Engine
+      - Custom metrics calculation
+      - Trend analysis
+      - Goal tracking
+
+      3. Visualization Layer
+      - Custom charts
+      - Progress indicators
+      - Interactive dashboards
+    `,
+    screenshots: [
+      {
+        url: '/screenshots/health-dashboard.svg',
+        caption: 'Health Dashboard',
+      },
+      {
+        url: '/screenshots/health-trends.svg',
+        caption: 'Health Trends Analysis',
+      },
+    ],
+    role: 'Lead developer responsible for HealthKit integration, data analysis algorithms, and privacy implementation.',
+    timeline: 'Developed over 5 months with continuous iterations based on user feedback and health expert consultations.',
+    impact: `
+      Notable achievements:
+      
+      • 50,000+ active users tracking daily health metrics
+      • 92% user satisfaction rate
+      • Featured in health & fitness category
+      • 30% improvement in user health goals achievement
+      • Recognized for outstanding privacy practices
+    `,
+  },
+  {
+    slug: 'arkit-explorer',
+    title: 'ARKit Explorer',
+    description: 'An augmented reality experience showcasing the power of ARKit with interactive 3D content.',
+    image: '/globe.svg',
+    appStoreLink: '#',
+    githubLink: '#',
+    technologies: ['Swift', 'ARKit', 'SceneKit', 'RealityKit', 'Metal'],
+    features: ['3D object recognition', 'Spatial mapping', 'Interactive AR elements', 'Real-time physics', 'Custom AR experiences', 'Gesture controls'],
+    challenges: ['Optimizing AR performance across different devices.', 'Creating intuitive AR interactions.', 'Handling varying lighting conditions and environments.'],
+    solutions: ['Implemented dynamic LOD (Level of Detail) system for 3D models.', 'Developed custom gesture recognizers for AR interactions.', 'Created adaptive lighting and environment detection systems.'],
+    architecture: `
+      Advanced AR architecture components:
+
+      1. AR Core
+      - Scene management
+      - Object tracking
+      - Physics simulation
+
+      2. Interaction Layer
+      - Gesture handling
+      - Ray casting
+      - Touch processing
+
+      3. Rendering Pipeline
+      - Custom shaders
+      - Material system
+      - Lighting management
+    `,
+    screenshots: [
+      {
+        url: '/screenshots/ar-scene.svg',
+        caption: 'AR Scene Interaction',
+      },
+      {
+        url: '/screenshots/ar-objects.svg',
+        caption: 'AR Object Recognition',
+      },
+    ],
+    role: 'AR specialist focusing on 3D interactions, performance optimization, and custom shader development.',
+    timeline: 'Developed over 7 months, including extensive testing in various real-world environments.',
+    impact: `
+      Project achievements:
+      
+      • Used in 10+ educational institutions
+      • 95% positive user feedback
+      • Featured at WWDC demo showcase
+      • 40% faster object recognition than competitors
+      • Successfully deployed in museum installations
+    `,
+  },
+  {
+    slug: 'swiftui-weather',
+    title: 'SwiftUI Weather',
+    description: 'A beautiful weather app built with SwiftUI featuring dynamic animations and real-time updates.',
+    image: '/project1-placeholder.svg',
+    appStoreLink: '#',
+    githubLink: '#',
+    technologies: ['SwiftUI', 'CoreLocation', 'WeatherKit', 'Combine', 'CoreAnimation'],
+    features: ['Live weather data', 'Custom animations', 'Location services', 'Weather alerts', 'Hourly forecasts', 'Weather maps'],
+    challenges: ['Creating smooth weather transitions and animations.', 'Managing real-time weather data updates.', 'Implementing accurate location-based forecasts.'],
+    solutions: ['Developed custom SwiftUI animation system for weather states.', 'Implemented efficient caching and background updates.', 'Created precise location-based weather algorithms.'],
+    architecture: `
+      Modern SwiftUI-based architecture:
+
+      1. Presentation Layer
+      - Custom SwiftUI views
+      - Animation system
+      - Weather visualizations
+
+      2. Data Layer
+      - WeatherKit integration
+      - Location services
+      - Caching system
+
+      3. Business Logic
+      - Weather calculations
+      - Forecast processing
+      - Alert management
+    `,
+    screenshots: [
+      {
+        url: '/screenshots/weather-main.svg',
+        caption: 'Main Weather View',
+      },
+      {
+        url: '/screenshots/weather-forecast.svg',
+        caption: 'Detailed Forecast',
+      },
+    ],
+    role: 'SwiftUI specialist responsible for UI/UX design, animations, and weather data integration.',
+    timeline: 'Completed in 4 months with regular updates based on user feedback and WeatherKit improvements.',
+    impact: `
+      App performance metrics:
+      
+      • 200,000+ active users
+      • 4.7/5 App Store rating
+      • Featured for iOS 16 design
+      • 25% better battery efficiency
+      • Top 10 in Weather category
+    `,
+  },
+  {
+    slug: 'cryptotracker-pro',
+    title: 'CryptoTracker Pro',
+    description: 'Real-time cryptocurrency tracking app with custom charts and price alerts.',
+    image: '/project2-placeholder.svg',
+    appStoreLink: '#',
+    githubLink: '#',
+    technologies: ['Swift', 'Charts', 'WebSocket', 'Core Data', 'StoreKit'],
+    features: ['Real-time price updates', 'Custom chart views', 'Price alerts', 'Portfolio tracking', 'Market analysis', 'Trading insights'],
+    challenges: ['Handling real-time data streams efficiently.', 'Creating responsive charts with large datasets.', 'Managing complex state with multiple cryptocurrencies.'],
+    solutions: ['Implemented efficient WebSocket management system.', 'Developed custom charting engine with data optimization.', 'Created robust state management architecture.'],
+    architecture: `
+      Financial data architecture:
+
+      1. Market Data Layer
+      - WebSocket connections
+      - Price aggregation
+      - Data normalization
+
+      2. Analysis Engine
+      - Technical indicators
+      - Trend analysis
+      - Alert system
+
+      3. Portfolio Management
+      - Transaction tracking
+      - Performance analytics
+      - Tax reporting
+    `,
+    screenshots: [
+      {
+        url: '/screenshots/crypto-dashboard.svg',
+        caption: 'Crypto Dashboard',
+      },
+      {
+        url: '/screenshots/crypto-analysis.svg',
+        caption: 'Technical Analysis',
+      },
+    ],
+    role: 'Full-stack iOS developer focusing on real-time data handling, financial calculations, and UI performance.',
+    timeline: 'Developed over 6 months with continuous integration of new crypto features and market analysis tools.',
+    impact: `
+      Market performance:
+      
+      • 150,000+ portfolio tracked
+      • 4.8/5 average rating
+      • Featured in Finance category
+      • 99.99% uptime for price tracking
+      • Top 5 crypto app in 10 countries
+    `,
+  },
 ];
 
 // Generate static params for all project slugs
@@ -147,5 +351,3 @@ export default function ProjectPage({ params }) {
     </main>
   );
 }
-
-export { generateStaticParams };

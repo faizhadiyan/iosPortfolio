@@ -4,13 +4,13 @@ import Image from 'next/image';
 import { useState } from 'react';
 import Link from 'next/link';
 
-export default function ProjectCard({ title, description, image, link, appStoreLink, githubLink, technologies, features }) {
+export default function ProjectCard({ title, description, image, link, appStoreLink, githubLink, technologies, features, slug }) {
   const [isHovered, setIsHovered] = useState(false);
-  const projectPath = `/projects/${title.toLowerCase().replace(/\s+/g, '-')}`;
+  const projectPath = `/projects/${slug}`;
 
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-      <Link href={link} className="block">
+      <Link href={projectPath} className="block">
         <div className="relative aspect-video bg-[#F5F5F7] overflow-hidden">
           <Image src={image} alt={title} fill className={`object-cover transition-transform duration-300 ${isHovered ? 'scale-105' : 'scale-100'}`} />
         </div>

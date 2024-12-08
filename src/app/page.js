@@ -61,7 +61,7 @@ export default function Home() {
         <section>
           <h2 className="text-3xl font-bold text-[#1D1D1F] text-center mb-12">Featured Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Link href="/projects/swiftsync-pro" className="group">
+            <Link href="/projects/swift-sync-pro" className="group">
               <div className="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-[1.02]">
                 <div className="aspect-video bg-[#F5F5F7] relative">
                   <Image src="/screenshots/app1-sync.svg" alt="SwiftSync Pro Screenshot" layout="fill" objectFit="cover" className="group-hover:opacity-90 transition-opacity" />
