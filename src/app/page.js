@@ -10,7 +10,7 @@ export default function Home() {
           <div className="relative w-48 h-48 mx-auto mb-8">
             <div className="absolute inset-0 bg-gradient-to-br from-[#0071E3] to-[#00A0FF] rounded-full opacity-10 blur-xl"></div>
             <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl">
-              <Image src="/placeholder-profile.svg" alt="Profile" width={192} height={192} priority className="object-cover" />
+              <Image src="/images/profile-photo.png" alt="Profile" width={192} height={192} priority className="object-cover" />
             </div>
           </div>
           <h1 className="text-5xl font-bold text-[#1D1D1F] mb-6">iOS Developer &amp; Mobile App Specialist</h1>
@@ -61,21 +61,25 @@ export default function Home() {
         <section>
           <h2 className="text-3xl font-bold text-[#1D1D1F] text-center mb-12">Featured Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Link href="/projects" className="group">
+            <Link href="/projects/swiftsync-pro" className="group">
               <div className="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-[1.02]">
-                <div className="aspect-video bg-[#F5F5F7]"></div>
+                <div className="aspect-video bg-[#F5F5F7] relative">
+                  <Image src="/screenshots/app1-sync.svg" alt="SwiftSync Pro Screenshot" layout="fill" objectFit="cover" className="group-hover:opacity-90 transition-opacity" />
+                </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-[#1D1D1F] mb-2">Project Name</h3>
-                  <p className="text-[#86868B]">Brief description of the project and its key features.</p>
+                  <h3 className="text-xl font-semibold text-[#1D1D1F] mb-2">SwiftSync Pro</h3>
+                  <p className="text-[#86868B]">A powerful iOS application showcasing modern Swift development practices and intuitive user experience.</p>
                 </div>
               </div>
             </Link>
-            <Link href="/projects" className="group">
+            <Link href="/projects/vision-ai" className="group">
               <div className="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-[1.02]">
-                <div className="aspect-video bg-[#F5F5F7]"></div>
+                <div className="aspect-video bg-[#F5F5F7] relative">
+                  <Image src="/screenshots/app2-ml.svg" alt="VisionAI Screenshot" layout="fill" objectFit="cover" className="group-hover:opacity-90 transition-opacity" />
+                </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-[#1D1D1F] mb-2">Project Name</h3>
-                  <p className="text-[#86868B]">Brief description of the project and its key features.</p>
+                  <h3 className="text-xl font-semibold text-[#1D1D1F] mb-2">VisionAI</h3>
+                  <p className="text-[#86868B]">An innovative iOS application leveraging machine learning and advanced iOS frameworks.</p>
                 </div>
               </div>
             </Link>

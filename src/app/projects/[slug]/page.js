@@ -2,9 +2,10 @@ import ProjectDetails from '../../../components/ProjectDetails';
 import Link from 'next/link';
 
 // This would typically come from a database or CMS
-const projectsData = {
-  'ios-app-name-1': {
-    title: 'iOS App Name 1',
+const projectsData = [
+  {
+    slug: 'swiftsync-pro',
+    title: 'SwiftSync Pro',
     description: 'A sophisticated iOS application that demonstrates modern Swift development practices and intuitive user experience design.',
     image: '/project1-placeholder.svg',
     appStoreLink: '#',
@@ -58,8 +59,9 @@ const projectsData = {
       • 40% reduction in data usage compared to previous version
     `,
   },
-  'ios-app-name-2': {
-    title: 'iOS App Name 2',
+  {
+    slug: 'vision-ai',
+    title: 'VisionAI',
     description: 'An innovative iOS app showcasing advanced iOS frameworks and clean architecture principles.',
     image: '/project2-placeholder.svg',
     appStoreLink: '#',
@@ -111,17 +113,17 @@ const projectsData = {
       • 99.9% uptime since launch
     `,
   },
-};
+];
 
-// Generate static params for all projects at build time
+// Generate static params for all project slugs
 export function generateStaticParams() {
-  return Object.keys(projectsData).map((slug) => ({
-    slug: slug,
+  return projectsData.map((project) => ({
+    slug: project.slug,
   }));
 }
 
 export default function ProjectPage({ params }) {
-  const project = projectsData[params.slug];
+  const project = projectsData.find((project) => project.slug === params.slug);
 
   if (!project) {
     return (
@@ -145,3 +147,5 @@ export default function ProjectPage({ params }) {
     </main>
   );
 }
+
+export { generateStaticParams };
