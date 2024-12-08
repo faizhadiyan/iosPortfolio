@@ -17,7 +17,7 @@ export default function Navbar() {
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="text-xl font-bold text-[#1D1D1F]">
-                Faiz Hadiyan
+                Faiz | Developer
               </Link>
             </div>
 
